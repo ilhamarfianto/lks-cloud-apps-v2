@@ -70,7 +70,7 @@ jobs:
           aws elasticbeanstalk create-application-version \
             --application-name "lks-eb-apps-ilham" \
             --version-label ${{ github.sha }} \
-            --source-bundle S3Bucket="${{ secrets.AWS_S3_BUCKET }}",S3Key="flask-app.zip"
+            --source-bundle S3Bucket="elasticbeanstalk-us-east-1-179991629133",S3Key="flask-app.zip"
             
           aws elasticbeanstalk update-environment \
             --environment-name lks-eb-apps-ilham-env \
