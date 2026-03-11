@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  web:
+    # GANTI URL DI BAWAH INI DENGAN URL REPOSITORY ECR ANDA
+    image: 179991629133.dkr.ecr.us-east-1.amazonaws.com/lks-repo-apps-v2:latest
+    ports:
+      - "80:5000"
