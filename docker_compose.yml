@@ -1,7 +1,9 @@
-version: '3.8'
+version: '3' # (atau versi yang Anda gunakan)
 services:
-  web:
-    # GANTI URL DI BAWAH INI DENGAN URL REPOSITORY ECR ANDA
-    image: 179991629133.dkr.ecr.us-east-1.amazonaws.com/lks-repo-apps-v2/lks-repo-apps-v2:latest
+  web: # (atau nama service Anda)
+    image: url-image-ecr-anda:latest
     ports:
       - "80:5000"
+    # TAMBAHKAN BAGIAN INI:
+    environment:
+      - API_URL=${API_URL}
